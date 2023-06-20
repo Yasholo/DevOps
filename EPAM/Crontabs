@@ -1,0 +1,20 @@
+systemctl status atd.service
+systemctl start atd.service
+at now +1min < ./bash.sh
+atq (for scheduled activities)
+at 02:30PM < ./bash.sh
+at 02:30PM 3 feb 2023 < ./bash.sh
+at midnight < ./bash.sh
+at +3 days < ./bash.sh
+at +3 months < ./bash.sh
+at 3:30PM +3days < ./bash.sh
+atrm (to remove a job)
+crond
+crontab -e
+crontab -r
+corntab -l
+
+#Write a shell programm to set automatic mail alert when ram memory size is less.
+
+
+

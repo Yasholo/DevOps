@@ -1,0 +1,14 @@
+---
+player: playerOne
+action: attack (miss)
+---
+player: playerTwo
+action: attack (hit)
+---
+Store:
+  Bakery:
+    - ‘Sourdough loaf’
+    - ‘Bagels’
+  Cheesemonger:
+    - ‘Blue cheese’
+    - ‘Feta’
