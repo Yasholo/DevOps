@@ -1,3 +1,6 @@
+#RUN THIS FILE USING XVFB-RUN (Xvfb is OpenSource and provides a deamon process that acts like a virtual DISPLAY)
+#CMD xvfb-run python3 motivator.py
+
 import time 
 import pywhatkit
 import requests
@@ -47,7 +50,11 @@ print(quotef)
 
 
 def final_function():
-    n = input("Enter Phone no: ")
+    try:
+        n = input("Enter Phone no: ")
+    # Rest of your code that uses the input 'n'
+    except EOFError:
+        print("Error: Unexpected end of input.")
     phone_no = "+91"+n
     try:
         pywhatkit.sendwhatmsg_instantly(
