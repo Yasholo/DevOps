@@ -1,5 +1,8 @@
 #RUN THIS FILE USING XVFB-RUN (Xvfb is OpenSource and provides a deamon process that acts like a virtual DISPLAY)
 #CMD xvfb-run python3 motivator.py
+#OR
+#CMD xhost + (and then execute motivator.py)
+#also try to runn in a virtual environment.
 
 import time 
 import pywhatkit
@@ -7,6 +10,7 @@ import requests
 # import random
 # import re
 import pyautogui
+# import keyboard as k 
 from pynput.keyboard import Key, Controller
 # from config import key
 keyboard = Controller()
@@ -66,7 +70,9 @@ def final_function():
         time.sleep(2)
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
+        # k.press_and_release('enter')
         print("Message sent!")
+
     except Exception as e:
         print("An error occurred:", str(e))
 
