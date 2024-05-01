@@ -91,14 +91,25 @@ In this step, we'll configure AWS CodeBuild to build our Python application base
 <img src="readme/addparameter.png" />
 <img src="readme/3parameters.png" />
 
+- Remember to add the AWS Systems Manager service role in your codebuild service role group, without this step the codebuild won't be able to communicate with systems manager.
+<img src="readme/policyssm.png" />
 
 - Now Specify the build commands, such as installing dependencies and running tests. Customize this based on your application's requirements. (refer the image below for help)
+<img src="readme/buildspec.png" />
 
-- Set up the artifacts configuration to generate the build output required for deployment.
+- For this project as we are pushing on Dockerhub we don't need it but, You can set up the artifacts configuration to generate the build output required for deployment.
+
 
 - Review the build project settings and click on the "Create build project" button to create your AWS CodeBuild project.
 
-Yay! You did it! With AWS CodeBuild all set up, we're now ready to witness the magic of continuous integration in action.
+- Yay! You did it! With AWS CodeBuild all set up, we're now ready to witness the magic of continuous integration in action.
+<img src="readme/startbuild.png" />
+<img src="readme/succeed.png" />
+
+- Let me show you that our Project actually worked... Remember we have specified in our buildspec file to push our application on docker hub. Let's go to docker hub and check out if it worked. 
+<img src="readme/Output.png" text="Yes It Did!" />
+
+- So, Now you know how to make your own AWS Codebuild project Kudos to you!  Now go use this tool to make exciting CI projects!
 
 ## COnfigure AWS CodeDeploy
 <img src="readme/CICD.png" />
@@ -126,18 +137,71 @@ In this step, we'll configure AWS CodeDeploy.
 
 - Now its time to give our EC2 instance some permissions so that it can communicate to aws CodeDeploy and vice-versa. To do that we will create an IAM role and grant our ec2 instace with this role.
 
-- Go to IAM >> Roles >> Create role >> select "EC2" in use case >> click next >> next >> Give Role name >> click create role. (Similarly create one more role for use case: "CodeDeploy")
+- Go to IAM >> Roles >> Create role >> select "EC2" in use case >> click next >> select 'AmazonEC2FullAccess' >>  next >> Give Role name >> click create role. (Similarly create one more role for use case: "CodeDeploy")
 <img src="readme/deployrole.png" />
 <img src="readme/deployrole2.png" />
+<img src="readme/ec2-codedeploy-role.png" />
 
 - Your role has been created now lets assign it to our ec2 instance. 
     Click on Instance >> Actions >> Security >> Modify IAM Role >> Choose you IAM role from dropdown  list >> click "Update IAM Role"
 
-- Once you have updated IAM Role, go to ur instance terminal and restart the service. {sudo systemctl restart codedeploy-agent
-}
+- Once you have updated IAM Role, go to ur instance terminal and restart the service. {sudo systemctl restart codedeploy-agent}
 
 - Now in CodeDeploy we need to create deployment group to establish connect with ec2. 
     Click on "Create Deployment Group" >> enter name for the group >> select service role (with usecase as codedeploy)>> Deployment type: In-place >> Environment config: Amazon EC2 Instance >> select key-value pair >> disable loadbalancer for now >> click on "create deployment group" 
+<img src="readme/deploymentgrp.png" />
+<img src="readme/deploymentgrp2.png" />
+<img src="readme/deploymentgrp3.png" />
+
+- Now, a final task! We need to create deployment. Go to your CodeDeploy application, and in the "Deployments" section click on "Create deployment" button.
+<img src="readme/deployments.png" />
+
+- Select the deployment group that we just created.
+- In revision type, select Github (If your github account is created you would see you github name alias, If not connected, write you github username in the input field and then click on "connect to github" and follow the steps, your account will connect!)
+- Now select the repository which contains you python flask app and other required files (use the same repo as used for CodeBuild.) give its latest commit ID.
+<img src="readme/deployments2.png" />
+
+- Other settings you can modify if you want to and then click on "Create deployment" button.
+<img src="readme/deployments3.png" />
+
+- If you see that the deployment fails on the first step. (This fail is due to the ec2 instance not running and thus code deploy agent not running on the instance.)
+<img src="readme/deployments4.png" />
+To solve this fail, make sure your instance in running and in the instance the code deploy agent is up!
+
+- Now click on 'Retry deployment' button.
+- This time the deployment will fail on the 'Beforeinstall" step. 
+
+The reason for this is that we need one "appspec.yaml" file, which if you look at the github repository is available but it is not at the root of the repository. (i.e yasholo/AWS-Devops) [I have used a repository which has multiple repositories and our sample app has many parent repositories. You can avoid it by initialising a new github repository which contains only the required files and has appspec.yml at the root]
+
+<img src="readme/deployments5.png" />
+
+- Let's fix this issue. I am linking my [github repo](https://github.com/Yasholo/AWS-Devops.git) for your reference. 
+
+- All you need to do is create an appspec.yml file at the root of the repository and two bash scripts (start_container.sh and stop_container.sh). 
+<img src="readme/deployments6.png" />
+(make sure to put the start_container.sh and stop_container.sh in new scripts repository. )
+<img src="readme/scripts.png" />
+
+- You can refer to these files to get an idea about what we need to do in these scripts. (We are basically pulling our docker image from the docker hub which we created in our codebuild project, and the we are running the container in daemon mode.)
+<img src="readme/deployments7.png" />
+<img src="readme/deployments8.png" />
+<img src="readme/deployments9.png" />
+
+- Before we rerun our deployment, make sure you have docker installed on your ec2 instance(sudo apt install docker.io -y), we can put that command in the appspec.yml file aswell but lets do it manually for now.
+
+- Now we are all set! Let's retry new deployment with a new(latest) commit ID and hit "Create deployment". (if this doesn't works you can create a new deployment group and then create deployment [I did the same!])
+<img src="readme/deployments10.png" />
+
+- Your deployment should succeed now!
+<img src="readme/deployments11.png" />
+
+The point of all this deployment was to take our code from docker hub and deploy it on our EC2 instance. As our deployment have succeeded we should have a docker container running on our instance with the same name as we gave it while CodeBuild. Also we should be able to access our webpage on localhost:port 5000 or from the public IP of the instance. Now, let's check if the magic happend!
+
+- Go to your EC2 instance and run "sudo docker ps"
+<img src="readme/deployments12.png" />
+Great! our docker container is up and running!
+
+Congratulations! You have learned to use CodeDeploy pretty well! Give yourself a pat on the back!.
 
 
 ## Create an AWS CodePipeline
