@@ -172,9 +172,36 @@ To solve this fail, make sure your instance in running and in the instance the c
 - This time the deployment will fail on the 'Beforeinstall" step. 
 
 The reason for this is that we need one "appspec.yaml" file, which if you look at the github repository is available but it is not at the root of the repository. (i.e yasholo/AWS-Devops) [I have used a repository which has multiple repositories and our sample app has many parent repositories. You can avoid it by initialising a new github repository which contains only the required files and has appspec.yml at the root]
+
 <img src="readme/deployments5.png" />
 
-- Let's fix this issue.
+- Let's fix this issue. I am linking my [github repo](https://github.com/Yasholo/AWS-Devops.git) for your reference. 
+
+- All you need to do is create an appspec.yml file at the root of the repository and two bash scripts (start_container.sh and stop_container.sh). 
+<img src="readme/deployments6.png" />
+(make sure to put the start_container.sh and stop_container.sh in new scripts repository. )
+<img src="readme/scripts.png" />
+
+- You can refer to these files to get an idea about what we need to do in these scripts. (We are basically pulling our docker image from the docker hub which we created in our codebuild project, and the we are running the container in daemon mode.)
+<img src="readme/deployments7.png" />
+<img src="readme/deployments8.png" />
+<img src="readme/deployments9.png" />
+
+- Before we rerun our deployment, make sure you have docker installed on your ec2 instance(sudo apt install docker.io -y), we can put that command in the appspec.yml file aswell but lets do it manually for now.
+
+- Now we are all set! Let's retry new deployment with a new(latest) commit ID and hit "Create deployment". (if this doesn't works you can create a new deployment group and then create deployment [I did the same!])
+<img src="readme/deployments10.png" />
+
+- Your deployment should succeed now!
+<img src="readme/deployments11.png" />
+
+The point of all this deployment was to take our code from docker hub and deploy it on our EC2 instance. As our deployment have succeeded we should have a docker container running on our instance with the same name as we gave it while CodeBuild. Also we should be able to access our webpage on localhost:port 5000 or from the public IP of the instance. Now, let's check if the magic happend!
+
+- Go to your EC2 instance and run "sudo docker ps"
+<img src="readme/deployments12.png" />
+Great! our docker container is up and running!
+
+Congratulations! You have learned to use CodeDeploy pretty well! Give yourself a pat on the back!.
 
 
 ## Create an AWS CodePipeline
