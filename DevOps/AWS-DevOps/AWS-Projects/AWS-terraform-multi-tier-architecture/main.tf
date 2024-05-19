@@ -18,7 +18,7 @@ module "network" {
 
 module "web" {
   source      = "./modules/web"
-  subnet_ids = module.network.public_subnet_ids
+  # subnet_ids = module.network.public_subnet_ids
 }
 
 
@@ -26,7 +26,7 @@ module "web" {
 
 module "application" {
   source      = "./modules/application"
-  subnet_ids = module.network.private_subnet_ids
+  # subnet_ids = module.network.private_subnet_ids
 }
 
 
@@ -41,13 +41,4 @@ module "database" {
 
 module "monitoring" {
   source = "./modules/monitoring"
-}
-
-# Output values
-output "web_server_ips" {
-  value = module.web.web_server_ips
-}
-
-output "database_endpoint" {
-  value = module.database.endpoint
 }
