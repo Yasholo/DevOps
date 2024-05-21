@@ -1,9 +1,0 @@
-example=hello
-echo $example 
-
-Globs (*, ?)
-
-echo *.py
-echo c*
-echo *
-echo ?????.py
