@@ -1,0 +1,208 @@
+Ques. Define ipv4 protocol and ipv6 protocol.
+IP stands for Internet Protocol and v4 stands for Version Four (IPv4). IPv4 was the primary version brought into action for production within the ARPANET in 1983. 
+IP version four addresses are 32-bit integers which will be expressed in decimal notation. 
+Example- 192.0.2.126 could be an IPv4 address. 
+Parts of IPv4
+
+    Network part: 
+    The network part indicates the distinctive variety that’s appointed to the network. The network part conjointly identifies the category of the network that’s assigned.
+    Host Part: 
+    The host part uniquely identifies the machine on your network. This part of the IPv4 address is assigned to every host. 
+    For each host on the network, the network part is the same, however, the host half must vary.
+    Subnet number: 
+    This is the nonobligatory part of IPv4. Local networks that have massive numbers of hosts are divided into subnets and subnet numbers are appointed to that.
+
+Characteristics of IPv4
+
+    IPv4 could be a 32-Bit IP Address.
+    IPv4 could be a numeric address, and its bits are separated by a dot.
+    The number of header fields is twelve and the length of the header field is twenty.
+    It has Unicast, broadcast, and multicast style of addresses.
+    IPv4 supports VLSM (Virtual Length Subnet Mask).
+    IPv4 uses the Post Address Resolution Protocol to map to the MAC address.
+    RIP may be a routing protocol supported by the routed daemon.
+    Networks ought to be designed either manually or with DHCP.
+    Packet fragmentation permits from routers and causing host.
+
+Advantages of IPv4
+
+    IPv4 security permits encryption to keep up privacy and security.
+    IPV4 network allocation is significant and presently has quite 85000 practical routers.
+    It becomes easy to attach multiple devices across an outsized network while not NAT.
+    This is a model of communication so provides quality service also as economical knowledge transfer.
+    IPV4 addresses are redefined and permit flawless encoding.
+    Routing is a lot of scalable and economical as a result of addressing is collective more effectively.
+    Data communication across the network becomes a lot of specific in multicast organizations.
+        Limits net growth for existing users and hinders the use of the net for brand new users.
+        Internet Routing is inefficient in IPv4.
+        IPv4 has high System Management prices and it’s labor-intensive, complex, slow & frequent to errors.
+        Security features are nonobligatory.
+        Difficult to feature support for future desires as a result of adding it on is extremely high overhead since it hinders the flexibility to attach everything over IP.
+
+Limitations of IPv4
+
+    IP relies on network layer addresses to identify end-points on network, and each network has a unique IP address.
+    The world’s supply of unique IP addresses is dwindling, and they might eventually run out theoretically.
+    If there are multiple host, we need IP addresses of next class.
+    Complex host and routing configuration, non-hierarchical addressing, difficult to re-numbering addresses, large routing tables, non-trivial implementations in providing security, QoS (Quality of Service), mobility and multi-homing, multicasting etc. are the big limitation of IPv4 so that’s why IPv6 came into the picture.
+
+
+
+
+
+
+Internet Protocol version 6 (IPV 6) is the replacement for version 4 (IPV 4). The phenomenal development of the Internet has begun to push IP to its limits. It provides a large address space, and it contains a simple header as compared to IPv4.
+Features of IPV6
+
+There are various features of IPV6, which are as follows−
+
+    Larger address space: An IPV6 address is 128 bits long. It is compared with the 32-bit address of IPV4. It will allow for unique IP-addresses up to 3.4 x 1038 whereas IPV4 allows up to 4.3 x 108 unique address.
+    Better Header format: New header form has been designed to reduce overhead. It is done by moving both non-essential fields and optional fields to extension field header that are placed after the IPV6 header.
+    More Functionality: It is designed with more options like priority of packet for control of congestion, Authentication etc.
+    Allowance for Extension: It is designed to allow the extension of the protocol if required by new technologies.
+    Support of resource allocation: In IPV6, the type of service fields has been removed, but a new mechanism has been added to support traffic control or flow labels like real-time audio and video.
+
+
+
+IPv4	IPv6
+IPv4 has a 32-bit address length	IPv6 has a 128-bit address length
+It Supports Manual and DHCP address configuration	It supports Auto and renumbering address configuration
+In IPv4 end to end, connection integrity is Unachievable	In IPv6 end to end, connection integrity is Achievable
+It can generate 4.29×109 address space	Address space of IPv6 is quite large it can produce 3.4×1038 address space
+The Security feature is dependent on application	IPSEC is an inbuilt security feature in the IPv6 protocol
+Address representation of IPv4 is in decimal	Address Representation of IPv6 is in hexadecimal
+Fragmentation performed by Sender and forwarding routers	In IPv6 fragmentation performed only by the sender
+In IPv4 Packet flow identification is not available	In IPv6 packet flow identification are Available and uses the flow label field in the header
+In IPv4 checksum field is available	In IPv6 checksum field is not available
+It has broadcast Message Transmission Scheme	In IPv6 multicast and anycast message transmission scheme is available
+In IPv4 Encryption and Authentication facility not provided	In IPv6 Encryption and Authentication are provided 
+ 
+IPv4 has a header of 20-60 bytes.	IPv6 has header of 40 bytes fixed 
+ 
+IPv4 can be converted to IPv6	Not all IPv6 can be converted to IPv4
+IPv4 consist of 4 fields which are separated by dot (.)	IPv6 consist of 8 fields, which are separated by colon (:)
+IPv4’s  IP addresses are divided into five different classes. Class A , Class B, Class C , Class D , Class E.	IPv6 does not have any classes of IP address.
+IPv4 supports VLSM(Variable Length subnet mask).	IPv6 does not support VLSM.
+Example of IPv4:  66.94.29.13	Example of IPv6: 2001:0000:3238:DFE1:0063:0000:0000:FEFB
+
+
+
+
+
+
+
+IPv4 vs IPv6
+What is IP?
+
+An IP stands for internet protocol. An IP address is assigned to each device connected to a network. Each device uses an IP address for communication. It also behaves as an identifier as this address is used to identify the device on a network. It defines the technical format of the packets. Mainly, both the networks, i.e., IP and TCP, are combined together, so together, they are referred to as a TCP/IP. It creates a virtual connection between the source and the destination.
+
+We can also define an IP address as a numeric address assigned to each device on a network. An IP address is assigned to each device so that the device on a network can be identified uniquely. To facilitate the routing of packets, TCP/IP protocol uses a 32-bit logical address known as IPv4(Internet Protocol version 4).
+
+An IP address consists of two parts, i.e., the first one is a network address, and the other one is a host address.
+
+There are two types of IP addresses:
+
+    IPv4
+    IPv6
+
+What is IPv4?
+
+IPv4 is a version 4 of IP. It is a current version and the most commonly used IP address. It is a 32-bit address written in four numbers separated by 'dot', i.e., periods. This address is unique for each device.
+
+For example, 66.94.29.13
+
+The above example represents the IP address in which each group of numbers separated by periods is called an Octet. Each number in an octet is in the range from 0-255. This address can produce 4,294,967,296 possible unique addresses.
+
+In today's computer network world, computers do not understand the IP addresses in the standard numeric format as the computers understand the numbers in binary form only. The binary number can be either 1 or 0. The IPv4 consists of four sets, and these sets represent the octet. The bits in each octet represent a number.
+
+Each bit in an octet can be either 1 or 0. If the bit the 1, then the number it represents will count, and if the bit is 0, then the number it represents does not count.
+
+Representation of 8 Bit Octet
+IPv4 vs IPv6
+
+The above representation shows the structure of 8- bit octet.
+
+Now, we will see how to obtain the binary representation of the above IP address, i.e., 66.94.29.13
+
+Step 1: First, we find the binary number of 66.
+IPv4 vs IPv6
+
+To obtain 66, we put 1 under 64 and 2 as the sum of 64 and 2 is equal to 66 (64+2=66), and the remaining bits will be zero, as shown above. Therefore, the binary bit version of 66 is 01000010.
+
+Step 2: Now, we calculate the binary number of 94.
+IPv4 vs IPv6
+
+To obtain 94, we put 1 under 64, 16, 8, 4, and 2 as the sum of these numbers is equal to 94, and the remaining bits will be zero. Therefore, the binary bit version of 94 is 01011110.
+
+Step 3: The next number is 29.
+IPv4 vs IPv6
+
+To obtain 29, we put 1 under 16, 8, 4, and 1 as the sum of these numbers is equal to 29, and the remaining bits will be zero. Therefore, the binary bit version of 29 is 00011101.
+
+Step 4: The last number is 13.
+IPv4 vs IPv6
+
+To obtain 13, we put 1 under 8, 4, and 1 as the sum of these numbers is equal to 13, and the remaining bits will be zero. Therefore, the binary bit version of 13 is 00001101.
+Drawback of IPv4
+
+Currently, the population of the world is 7.6 billion. Every user is having more than one device connected with the internet, and private companies also rely on the internet. As we know that IPv4 produces 4 billion addresses, which are not enough for each device connected to the internet on a planet. Although the various techniques were invented, such as variable- length mask, network address translation, port address translation, classes, inter-domain translation, to conserve the bandwidth of IP address and slow down the depletion of an IP address. In these techniques, public IP is converted into a private IP due to which the user having public IP can also use the internet. But still, this was not so efficient, so it gave rise to the development of the next generation of IP addresses, i.e., IPv6.
+What is IPv6?
+
+IPv4 produces 4 billion addresses, and the developers think that these addresses are enough, but they were wrong. IPv6 is the next generation of IP addresses. The main difference between IPv4 and IPv6 is the address size of IP addresses. The IPv4 is a 32-bit address, whereas IPv6 is a 128-bit hexadecimal address. IPv6 provides a large address space, and it contains a simple header as compared to IPv4.
+
+It provides transition strategies that convert IPv4 into IPv6, and these strategies are as follows:
+
+    Dual stacking: It allows us to have both the versions, i.e., IPv4 and IPv6, on the same device.
+    Tunneling: In this approach, all the users have IPv6 communicates with an IPv4 network to reach IPv6.
+    Network Address Translation: The translation allows the communication between the hosts having a different version of IP.
+
+This hexadecimal address contains both numbers and alphabets. Due to the usage of both the numbers and alphabets, IPv6 is capable of producing over 340 undecillion (3.4*1038) addresses.
+
+IPv6 is a 128-bit hexadecimal address made up of 8 sets of 16 bits each, and these 8 sets are separated by a colon. In IPv6, each hexadecimal character represents 4 bits. So, we need to convert 4 bits to a hexadecimal number at a time
+Address format
+
+The address format of IPv4:
+IPv4 vs IPv6
+
+The address format of IPv6:
+IPv4 vs IPv6
+
+The above diagram shows the address format of IPv4 and IPv6. An IPv4 is a 32-bit decimal address. It contains 4 octets or fields separated by 'dot', and each field is 8-bit in size. The number that each field contains should be in the range of 0-255. Whereas an IPv6 is a 128-bit hexadecimal address. It contains 8 fields separated by a colon, and each field is 16-bit in size.
+Differences between IPv4 and IPv6
+IPv4 vs IPv6
+	Ipv4 	Ipv6
+Address length 	IPv4 is a 32-bit address. 	IPv6 is a 128-bit address.
+Fields 	IPv4 is a numeric address that consists of 4 fields which are separated by dot (.). 	IPv6 is an alphanumeric address that consists of 8 fields, which are separated by colon.
+Classes 	IPv4 has 5 different classes of IP address that includes Class A, Class B, Class C, Class D, and Class E. 	IPv6 does not contain classes of IP addresses.
+Number of IP address 	IPv4 has a limited number of IP addresses. 	IPv6 has a large number of IP addresses.
+VLSM 	It supports VLSM (Virtual Length Subnet Mask). Here, VLSM means that Ipv4 converts IP addresses into a subnet of different sizes. 	It does not support VLSM.
+Address configuration 	It supports manual and DHCP configuration. 	It supports manual, DHCP, auto-configuration, and renumbering.
+Address space 	It generates 4 billion unique addresses 	It generates 340 undecillion unique addresses.
+End-to-end connection integrity 	In IPv4, end-to-end connection integrity is unachievable. 	In the case of IPv6, end-to-end connection integrity is achievable.
+Security features 	In IPv4, security depends on the application. This IP address is not developed in keeping the security feature in mind. 	In IPv6, IPSEC is developed for security purposes.
+Address representation 	In IPv4, the IP address is represented in decimal. 	In IPv6, the representation of the IP address in hexadecimal.
+Fragmentation 	Fragmentation is done by the senders and the forwarding routers. 	Fragmentation is done by the senders only.
+Packet flow identification 	It does not provide any mechanism for packet flow identification. 	It uses flow label field in the header for the packet flow identification.
+Checksum field 	The checksum field is available in IPv4. 	The checksum field is not available in IPv6.
+Transmission scheme 	IPv4 is broadcasting. 	On the other hand, IPv6 is multicasting, which provides efficient network operations.
+Encryption and Authentication 	It does not provide encryption and authentication. 	It provides encryption and authentication.
+Number of octets 	It consists of 4 octets. 	It consists of 8 fields, and each field contains 2 octets. Therefore, the total number of octets in IPv6 is 16.
+
+
+
+
+
+
+
+Ques2. Calculate number of host addresses if 198 represents network and 168.3.5 represents host.
+
+65534
+
+
+
+ques3. If ip is 12.14.10.1 and 8 bits are representing a network what will be the host address and what will the class name?
+
+Ans.	Class A   host address: 0.14.10.1
+
+
+

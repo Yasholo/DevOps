@@ -1,0 +1,43 @@
+services:
+  block-33-floor1:
+    image: busybox:latest
+    tty: true
+    # stdin_open: true
+    networks:
+      - block33-net
+  block-33-floor2:
+    image: busybox:latest
+    tty: true
+    # stdin_open: true
+    networks:
+      - block33-net
+  block-33-floor3:
+    image: busybox:latest
+    tty: true
+    # stdin_open: true
+    networks:
+      - block33-net
+  block-34-floor1:
+    image: busybox:latest
+    tty: true
+    # stdin_open: true
+    networks:
+      - block34-net
+  block-34-floor2:
+    image: busybox:latest
+    tty: true
+    # stdin_open: true
+    networks:
+      - block34-net
+  block-34-floor3:
+    image: busybox:latest
+    tty: true
+    # stdin_open: true
+    networks:
+      - block34-net
+
+networks:
+  block33-net:
+    driver: bridge
+  block34-net:
+    driver: bridge

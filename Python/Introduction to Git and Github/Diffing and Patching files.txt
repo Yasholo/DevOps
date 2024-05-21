@@ -1,0 +1,5 @@
+diff rearrange1.py rearrange2.py
+
+///////////////////////////
+
+patch cpu_usage.py < cpu_usage.diff

@@ -1,0 +1,1 @@
+36 16 * * * echo this is my first cron job > /home/Cactus/test_cron_first.txt

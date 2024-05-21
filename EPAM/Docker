@@ -1,0 +1,12 @@
+https://www.docker.com/get-started/
+
+#create a docker file to execute python file in the container.
+
+#create a user image which uses ubuntu as base image, install apache2 webserver on it then expose it to port 80/UDP also specify enterypoint for the image.
+
+#14th feb
+#Create a docker compose file for web server nginx and assign static ip.
+
+
+#15feb 
+#Create a host volume and specify details in the docker compose file

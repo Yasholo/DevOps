@@ -1,0 +1,218 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>
+Fitness Gym
+</title>
+
+<style>
+
+body
+{
+background-color:#ffd700;
+margin:0px;
+}
+
+.main-menu ul
+{
+float:right;
+position:center;
+background:lime;
+width:50%;
+padding:0;
+margin:0;
+left:55%;
+text-align:center;
+}
+
+.main-menu ul li
+{display:inline;position:relative;}
+
+.main-menu ul li a
+{
+color:#222;
+text-transform:uppercase;
+font-size:40%;
+font-weight:600;
+display:inline-block;
+padding:15px;
+}
+
+.main-menu ul li a:hover{color:lightslategrey; transform: scale(1.25); header#top;}
+
+
+div.line
+{
+background-color:#2f4f4f;
+color:lime;
+font-size:250%;
+margin-bottom: 40px;
+width:40%
+padding:40px 0px 40px 0px;
+}
+
+
+.line h1
+{
+text-align:center;
+margin-top:0;
+margin-bottom:0;
+padding:7%;
+}
+
+form
+{
+top:60%;
+left:50%;
+margin-top:50%;
+margin:40px;
+background-image:url("register-1.jpg");
+width:50%;
+height:100%;
+text-align:Justify;
+color:white;
+border: 5px solid lime;
+padding:10px;
+}
+
+label
+{
+font-size:20px;
+padding:20px;
+}
+
+#email
+{
+opacity:0.5;
+}
+
+#fname
+{
+opacity:0.5;
+}
+
+#lname
+{
+opacity:0.5;
+}
+
+#age
+{
+opacity:0.5;
+}
+
+#number
+{
+opacity:0.5;
+maxlength:"10" ;
+}
+#birthday
+{
+opacity:0.5;
+}
+
+#gender
+{
+opacity:0.5;
+}
+
+div.reg
+{
+margin-left:30%;
+margin-top:10%;
+align:center;
+}
+
+h2
+{
+margin-top:5px;
+pading-top:5px;
+padding:20px;
+font-size:50px;
+}
+
+#menu2 ul
+{
+position:center;
+background:#222;
+padding:0;
+margin: 0px;
+margin-top:60px;
+text-align:center;
+justify-content:space between;
+}
+
+#menu2 ul li
+{display:inline; padding-right:10%;
+padding-left:10%;}
+
+#menu2 ul li a
+{
+color:lime;
+font-size:120%;
+font-weight:600;
+display:inline-block;
+padding:15px;
+}
+
+#menu2 ul li a:hover{color:lightslategrey; transform: scale(1.25); header#top;}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="line">
+
+<h1>Fitness Club</h1>
+
+<div class="main-menu">
+<ul>
+<li><a href="1-Gym.html" title="Go to Home">Home</a> </li><li> <a href="#course"> Courses </a> </li>
+<li><a href="timetable.html"  title="Go to Timetable" >Timetable</a> </li><li><a href="gallery.html" title="Go to Gallery"> Gallery </a></li> <li><a href="about1.html" title="Go to About Us">About Us</a> </li> <li><a href="#menu2" title="Go Follow Us">Follow us</a></li>
+</ul>
+</div>
+</div>
+
+<div class="reg">
+
+<form name="myform" id="myform"  onsubmit="alert('Details Submitted. We will contact you soon!')">
+<h2>Register Now!</h2>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" required><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" required><br><br>
+<label for="age">Your Age: </label>
+<input type="number" id="age" name="age" required><br><br>
+<label for="gender">Gender:</label><input type="radio" name="gender" class="gender" required>
+    <label for="male">Male</label>
+    <input type="radio" name="gender" class="gender">
+    <label for="female">Female</label>
+<input type="radio" name="gender" class="gender">
+    <label for="other">Other</label>  <br> <br>
+<label for="number">Phone No:</label>
+<input type="tel" id="number" name="number"  maxlenght="10"  required>
+<br><br>
+<label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+<label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday" required><br><br>
+  <label><input type="submit" value="Register" ></label><br><br><label><input type="reset"><br><br></label>
+</form> 
+
+</div>
+
+<div id="menu2">
+<ul> <li><a href="https://instagram.com/_.bhavik_jain._" target="_blank" title="Go Follow us!">Follow Bhavik</a></li><li><a href="https://instagram.com/yasholo_" target="_blank" title="Go Follow us!">Follow Yash</a></li><li><a href="https://instagram.com/official_imran_080" target="_blank" title="Go Follow us!">Follow  Imran</a></li> </ul>
+</div>
+
+</body>
+
+</html>

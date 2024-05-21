@@ -1,0 +1,21 @@
+fruits.sh>
+
+#!/bin/bash
+
+for fruit in peach orange apple; do
+        echo "I like $fruit!"
+done
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+rename.sh>
+
+#!/bin/bash
+
+for file in *.HTM; do
+      name="$file" "$name.html"
+      mv "$file" "$name.html"
+done
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+

@@ -1,0 +1,303 @@
+<svg fill="none" viewBox="0 0 600 125" width="600" height="125" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>        
+.line-1{
+    position: relative;
+<!--     top: 50%;   -->
+    width: 100em;
+    margin: auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+<!--     transform: translateY(-50%);     -->
+}
+
+        /* Animation */
+        
+        .anim-typewriter{
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(22) infinite normal;
+        }
+        
+        @keyframes typewriter{
+        from{width: 0;}
+        to{width: 18em;}
+        }
+        
+        @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+        }
+        
+        @keyframes hi  {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        
+
+        .title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #E31E1E;
+  --color-2: #012CC8;
+  --color-3: #00C50A;
+}
+
+.title-word-2 {
+  --color-1: #012CC8;
+  --color-2: #00C50A;
+  --color-3: #EAE140;
+}
+
+.title-word-3 {
+  --color-1: #00C50A;
+  --color-2: #EAE140;
+  --color-3: #D600C3;
+}
+
+.title-word-4 {
+  --color-1: #EAE140;
+  --color-2: #D600C3;
+  --color-3: #E31E1E;
+}
+.title-word-5 {
+  --color-1: #D600C3;
+  --color-2: #E31E1E;
+  --color-3: #012CC8;
+}
+.title-word-6 {
+  --color-1: #00C50A;
+  --color-2: #EAE140;
+  --color-3: #E31E1E;
+}
+        
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+<!-- /* Here are just some visual styles. 🖌 */ -->
+
+<!-- .container2 {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 100vh
+} -->
+
+.title {
+  font-family: bungee, sans-serif;
+  font-weight: 700;
+  font-size: calc(.8rem + 2vw);
+<!--   text-transform: uppercase; -->
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #E31E1E;
+  --color-2: #012CC8;
+  --color-3: #00C50A;
+  --color-4: #EAE140;
+  --color-5: #D600C3;
+  /*
+  --color-1: #5192ED;
+  --color-2: #69A1F0;
+  --color-3: #7EAEF2;
+  --color-4: #90BAF5;
+  --color-5: #A2C4F5;
+  */
+}
+
+body {
+  min-height: 100vh;
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #eff8e2;
+}
+
+        
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-2), 6px 6px 0 var(--color-3), 9px 9px var(--color-4), 12px 12px 0 var(--color-5);
+  font-family: bungee, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: calc(1rem + 2.5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-1);
+  //color: transparent;
+  //background-color: white;
+  //background-clip: text;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-2);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3), 9px 9px var(--color-4);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3), 9px 9px var(--color-4),
+      12px 12px 0 var(--color-5);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3), 9px 9px var(--color-4),
+      12px 12px 0 var(--color-5);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3), 9px 9px var(--color-4),
+      12px 12px 0 var(--color-5);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3), 9px 9px var(--color-4);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-2),
+      6px 6px 0 var(--color-3);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-2);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+        .container {
+          --color-main: #d1439e;
+          --color-primary: #f8e924;
+          --color-secondary: #54276f;
+          --color-tertiary: #1da5be;
+          --color-quaternary: #131c5a;
+
+          background: linear-gradient(-45deg, var(--color-main), var(--color-primary), var(--color-secondary), var(--color-tertiary), var(--color-quaternary));
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+
+          width: 100%;
+          height: 125px;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center
+          color: white;
+
+<!--           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; -->
+        }
+
+        .hi {
+          animation: hi 1.5s linear -0.5s infinite;
+          display: inline-block;
+          transform-origin: 70% 70%;
+        }
+
+        @media (prefers-color-scheme: light) {
+          .container {
+            --color-main: #EB60CF;
+            --color-primary: #C417C4;
+            --color-secondary: #030129;
+            --color-tertiary: #140CAB;
+            --color-quaternary : #2D82BD;
+          }
+        }
+
+        @media (prefers-reduced-motion) {
+          .container {
+            animation: none;
+          }
+
+          .hi {
+            animation: none;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <h1 class="title line-1 anim-typewriter ">
+          <span class="title-word title-word-1">Hi</span>
+          <span class="title-word title-word-2">there</span>
+          <span class="title-word title-word-3">, </span>
+          <span class="title-word title-word-4">my</span>
+          <span class="title-word title-word-5">name</span>
+          <span class="title-word title-word-6">is</span>
+          <span class="text_shadows">Yash!</span>
+           <div class="hi text_shadows">👋</div>
+        </h1>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
+
