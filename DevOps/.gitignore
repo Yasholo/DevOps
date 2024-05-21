@@ -1,9 +1,0 @@
-# Ignore PEM files
-*.pem
-
-# Other files or directories to ignore
-.terraform/
-terraform.tfstate
-terraform.tfstate.backup
-.terraform.tfstate.lock.info
-crash.log
